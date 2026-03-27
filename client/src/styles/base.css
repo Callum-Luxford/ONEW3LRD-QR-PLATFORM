@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ROOT STYLES */
+:root {
+
+    --font-family-base: 'Montserrat', sans-serif;
+
+    /* ----------- Fixed Font sizes ------------ */
+    /* ----------- Fixed Font sizes ------------ */
+    /* --font-size-2xs: 0.625rem;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-4xl: 2rem;
+    --font-size-5xl: 2.25rem;
+    --font-size-6xl: 2.5rem;
+    --font-size-7xl: 3rem;
+    --font-size-8xl: 3.5rem;
+    --font-size-9xl: 4rem;
+    --font-size-10xl: 4.5rem;
+    --font-size-11xl: 5rem;
+    --font-size-12xl: 6rem; */
+
+    /* ----------- Font sizes clamped ------------ */
+    /* ----------- Font sizes clamped ------------ */
+    --font-size-2xs: clamp(0.5rem, 1vw, 0.625rem);
+    --font-size-xs: clamp(0.625rem, 1vw, 0.75rem);
+    --font-size-sm: clamp(0.75rem, 1.1vw, 0.875rem);
+    --font-size-md: clamp(0.875rem, 1.2vw, 1rem);
+    --font-size-lg: clamp(1rem, 1.3vw, 1.125rem);
+    --font-size-xl: clamp(1.125rem, 1.5vw, 1.25rem);
+    --font-size-2xl: clamp(1.25rem, 1.8vw, 1.5rem);
+    --font-size-3xl: clamp(1.5rem, 2vw, 1.75rem);
+    --font-size-4xl: clamp(1.75rem, 2.2vw, 2rem);
+    --font-size-5xl: clamp(2rem, 2.5vw, 2.25rem);
+    --font-size-6xl: clamp(2.25rem, 2.8vw, 2.5rem);
+    --font-size-7xl: clamp(2.5rem, 3vw, 3rem);
+    --font-size-8xl: clamp(3rem, 3.5vw, 3.5rem);
+    --font-size-9xl: clamp(3.5rem, 4vw, 4rem);
+    --font-size-10xl: clamp(4rem, 4.5vw, 4.5rem);
+    --font-size-11xl: clamp(4.5rem, 5vw, 5rem);
+    --font-size-12xl: clamp(5rem, 6vw, 6rem);
+
+    /* ----------- Font weights ------------ */
+    /* ----------- Font weights ------------ */
+    --font-weight-1: 100;
+    --font-weight-2: 200;
+    --font-weight-3: 300;
+    --font-weight-4: 400;
+    --font-weight-5: 500;
+    --font-weight-6: 600;
+    --font-weight-7: 700;
+    --font-weight-8: 800;
+    --font-weight-9: 900;
+
+    /* ----------- Letter spacing ------------ */
+    /* ----------- Letter spacing ------------ */
+    --letter-spacing-1: -0.08em;
+    --letter-spacing-2: -0.04em;
+    --letter-spacing-3: -0.02em;
+    --letter-spacing-4: 0;
+    --letter-spacing-5: 0.02em;
+    --letter-spacing-6: 0.04em;
+    --letter-spacing-7: 0.08em;
+
+    /* ----------- border radius ------------ */
+    /* ----------- border radius ------------ */
+    --border-radius-none: 0rem;
+    --border-radius-2xs: 0.1875rem;
+    --border-radius-xs: 0.25rem;
+    --border-radius-sm: 0.375rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+    --border-radius-2xl: 1.5rem;
+    --border-radius-full: 9999px;
+
+    /* ----------- box-shadows ------------ */
+    /* ----------- box-shadows ------------ */
+    --shadow-2xs: 0 1px 2px rgba(134, 144, 162, 0.1);
+    --shadow-xs: 0 2px 4px rgba(134, 144, 162, 0.15);
+    --shadow-sm: 0 3px 6px rgba(134, 144, 162, 0.2);
+    --shadow-md: 0 4px 8px rgba(134, 144, 162, 0.25);
+    --shadow-lg: 0 6px 12px rgba(134, 144, 162, 0.3);
+    --shadow-xl: 0 12px 24px rgba(134, 144, 162, 0.35);
+    --shadow-2xl: 0 24px 48px rgba(134, 144, 162, 0.4);
+
+    --shadow-focus: 0 0 0 4px rgba(0, 84, 203, 0.2);
+    --shadow-success: 0 0 0 4px rgba(18, 181, 57, 0.2);
+    --shadow-warning: 0 0 0 4px rgba(210, 127, 0, 0.2);
+    --shadow-danger: 0 0 0 4px rgba(203, 18, 0, 0.2);
+    --shadow-info: 0 0 0 4px rgba(0, 200, 177, 0.2);
+
+    --swiper-shadow: 0 5px 5px 1px rgba(0, 0, 0, 1);
+
+    /* ----------- filter blur ------------ */
+    /* ----------- filter blur ------------ */
+    --filter-blur-2xs: 4px;
+    --filter-blur-xs: 8px;
+    --filter-blur-sm: 12px;
+    --filter-blur-md: 16px;
+    --filter-blur-lg: 24px;
+    --filter-blur-xl: 32px;
+    --filter-blur-2xl: 48px;
+
+    /* ----------- Font colors ------------ */
+    /* ----------- Font colors ------------ */
+    --font-clr-1: #ffffff;
+    --font-clr-2: #b6b6b6;
+    --font-clr-3: #ffffff6b;
+    --font-clr-4: #ffffff6b;
+
+    /* ----------- theme colors ------------ */
+    /* ----------- theme colors ------------ */
+    --theme-clr-1: #0a0e14;
+    --theme-clr-2: #151a23;
+
+    /* ----------- button colors ------------ */
+    /* ----------- button colors ------------ */
+    --button-clr-1: #5F8D4E;
+
+    /* ----------- icon colors ------------ */
+    /* ----------- icon colors ------------ */
+    --icon-clr-1: invert(28%) sepia(25%) saturate(407%) hue-rotate(178deg) brightness(84%) contrast(100%);
+    --icon-clr-2: invert(100%) sepia(9%) saturate(2%) hue-rotate(290deg) brightness(108%) contrast(100%);
+
+
+
+    /* ----------- CORE THEME COLOURS ------------ */
+    /* ----------- CORE THEME COLOURS ------------ */
+
+    /* ----------- CORE THEME COLOURS ------------ */
+    /* ----------- CORE THEME COLOURS ------------ */
+
+    /* ----------- Extra CSS / Project Specific ------------ */
+    /* ----------- Extra CSS / Project Specific ------------ */
+    --focus-clr-1: #0d9488;
+}
+
+@layer base {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        margin: 0;
+        padding: 0;
+        background-color: var(--theme-clr-1);
+        font-family: 'Montserrat', sans-serif;
+        font-family: var(--font-family-base);
+        transition: padding-right 0.2s ease;
+
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="checkbox"],
+    input[type="radio"],
+    select,
+    textarea {
+        @apply w-full border;
+    }
+
+    textarea {
+        outline: none;
+        transition: all 0.3s ease;
+        background-clip: padding-box;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="search"]:focus,
+    textarea:focus {
+        box-shadow: none;
+    }
+
+    input[type="option"],
+    select {
+        @apply border-none rounded-none w-fit;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    select:-webkit-autofill {
+        -webkit-text-fill-color: white;
+        /* your terminal green */
+        transition: background-color 9999s ease-in-out 0s;
+    }
+
+    input {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* === TAILWIND UTILITIES === */
+@layer utilities {}
+
+/* === TAILWIND UTILITY COMPONENTS === */
+@layer components {}
+
+:root {
+    font-family: "Montserrat", sans-serif;
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.72);
+    --success: #86efac;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    color: var(--text);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+video,
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   VIDEO PAGE
+========================= */
+
+.video-page-shell {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: #000;
+    overflow: hidden;
+}
+
+.video-loading-screen {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #000;
+    color: #fff;
+}
+
+.fullscreen-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.fullscreen-video__media {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100vh;
+    height: 100dvh;
+    width: auto;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background: #000;
+    object-fit: cover;
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.171);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 30;
+    transition: background 0.3s, transform 0.3s;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.play-button-overlay:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon-shape {
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 20px solid #ffffff;
+    margin-left: 4px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+}
+
+.chat-button {
+    position: fixed;
+    bottom: calc(30px + env(safe-area-inset-bottom));
+    left: 50%;
+    transform: translate(-50%, 140px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 210px;
+    min-height: 56px;
+    max-width: 90vw;
+    padding: 14px 32px;
+
+    color: #ffffff !important;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1;
+
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 999px;
+    background: rgba(36, 92, 255, 0.78);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.22),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+    will-change: transform, opacity;
+}
+
+.chat-button.hidden {
+    transform: translate(-50%, 140px);
+    opacity: 0;
+    pointer-events: none;
+    animation: none;
+}
+
+.chat-button.show {
+    opacity: 1;
+    pointer-events: auto;
+    animation:
+        joinButtonSlideIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+        pulse 2s infinite ease-in-out 0.75s;
+}
+
+.chat-button.show:hover {
+    transform: translate(-50%, -8px) scale(1.03);
+    background: rgba(36, 92, 255, 0.9);
+}
+
+@keyframes joinButtonSlideIn {
+    0% {
+        transform: translate(-50%, 140px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.171);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 30;
+    transition: background 0.3s, transform 0.3s;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.play-button-overlay:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon-shape {
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 20px solid #ffffff;
+    margin-left: 4px;
+}
+
+/* =========================
+   JOIN PAGE
+========================= */
+
+.join-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.join-panel {
+    width: 100%;
+    max-width: 40rem;
+    background: #000;
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    border: 1px solid #fff;
+    margin: 0 auto;
+    @apply rounded-md
+}
+
+.join-panel__header {
+    margin: 0 auto 1.5rem;
+    max-width: 34rem;
+    text-align: center;
+}
+
+.join-panel__title {
+    margin: 0;
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.join-panel__subtitle {
+    margin: 0.75rem auto 0;
+    max-width: 30rem;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: clamp(0.95rem, 3.8vw, 1.2rem);
+    line-height: 1.45;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 34rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form__group label {
+    color: #fff;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 400;
+}
+
+.contact-form__group input,
+.contact-form__group textarea {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.34);
+    border-radius: 1rem;
+    background: #000;
+    color: #fff;
+    padding: 0.95rem 1rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form__group input {
+    min-height: 3.9rem;
+}
+
+.contact-form__group textarea {
+    min-height: 8.5rem;
+    resize: vertical;
+}
+
+.contact-form__group input:focus,
+.contact-form__group textarea:focus {
+    border-color: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.contact-form__submit {
+    width: fit-content;
+    min-width: 200px;
+    margin: 0.5rem auto 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.9rem;
+    background: #efefef;
+    color: #1b1b1b;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-form__submit:hover {
+    transform: translateY(-1px);
+}
+
+.contact-form__submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.contact-form__status {
+    margin: 0.25rem 0 0;
+    text-align: center;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.contact-form__status.is-success {
+    color: #ffffff;
+}
+
+.join-back-link {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* slightly larger phones and up */
+@media (min-width: 480px) {
+    .join-page {
+        padding: 1.25rem;
+    }
+
+    .join-panel {
+        padding: 2.25rem 1.25rem 1.75rem;
+    }
+}
+
+/* tablets and desktop */
+@media (min-width: 768px) {
+    .join-page {
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .join-panel {
+        padding: 2.75rem 2rem 2rem;
+    }
+
+    .contact-form {
+        gap: 1.5rem;
+    }
+
+    .contact-form__group input {
+        min-height: 4.5rem;
+    }
+
+    .contact-form__group textarea {
+        min-height: 10rem;
+    }
+
+    .contact-form__submit {
+        min-height: 4.5rem;
+        min-width: 9.5rem;
+    }
+}
