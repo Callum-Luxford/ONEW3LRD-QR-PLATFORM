@@ -38,25 +38,27 @@ function VideoHero({ experience, onVideoStart }) {
 
   return (
     <section className="fullscreen-video">
-      <video
-        ref={videoRef}
-        className="fullscreen-video__media"
-        src={experience.videoUrl}
-        playsInline
-        preload="metadata"
-        controls={false}
-      />
+      <div className="fullscreen-video__stage">
+        <video
+          ref={videoRef}
+          className="fullscreen-video__media"
+          src={experience.videoUrl}
+          playsInline
+          preload="metadata"
+          controls={false}
+        />
 
-      {!hasStarted ? (
-        <button
-          type="button"
-          className="play-button-overlay"
-          onClick={handleStartVideo}
-          aria-label="Play video"
-        >
-          <span className="play-icon-shape" />
-        </button>
-      ) : null}
+        {!hasStarted ? (
+          <button
+            type="button"
+            className="play-button-overlay"
+            onClick={handleStartVideo}
+            aria-label="Play video"
+          >
+            <span className="play-icon-shape" />
+          </button>
+        ) : null}
+      </div>
     </section>
   );
 }

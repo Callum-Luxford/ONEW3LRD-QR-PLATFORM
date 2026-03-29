@@ -1,4 +1,5 @@
 import demoVideo from "../assets/videos/dub-customs-join.mp4";
+import logo from "../assets/images/dub-customs-logo.jpeg";
 
 export const demoExperience = {
   id: "demo-experience",
@@ -11,4 +12,8 @@ export const demoExperience = {
   joinPageSubtitle:
     "Leave your details below and we will show you what the full experience could look like.",
   videoUrl: demoVideo,
+  logo: logo,
+  logoOptions: {
+    width: "300px",
+  },
 };

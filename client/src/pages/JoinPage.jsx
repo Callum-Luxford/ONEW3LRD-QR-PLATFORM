@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import JoinForm from "../components/JoinForm";
 import { getExperience } from "../services/experienceService";
+import CompanyLogo from "../components/CompanyLogo";
 
 function JoinPage() {
   const [experience, setExperience] = useState(null);
@@ -29,6 +30,7 @@ function JoinPage() {
     <section className="join-page">
       <div className="join-panel">
         <div className="join-panel__header">
+          <CompanyLogo src={experience.logo} options={experience.logoOptions} />
           <h1 className="join-panel__title">Contact Information</h1>
           <p className="join-panel__subtitle">
             Enter your contact details below to receive further information.
