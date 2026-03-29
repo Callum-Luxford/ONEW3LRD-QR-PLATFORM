@@ -40,11 +40,9 @@ function VideoHero({ experience, onVideoStart }) {
     const videoElement = videoRef.current;
     if (!videoElement) return;
 
-    function primeFirstFrame() {
-      if (hasStarted) return;
-
+    function handleLoadedData() {
       try {
-        if (videoElement.readyState >= 2) {
+        if (!hasStarted && videoElement.readyState >= 2) {
           videoElement.currentTime = 0.05;
         }
       } catch (error) {
@@ -54,13 +52,14 @@ function VideoHero({ experience, onVideoStart }) {
 
     videoElement.preload = "auto";
     videoElement.load();
-
-    videoElement.addEventListener("loadeddata", primeFirstFrame);
+    videoElement.addEventListener("loadeddata", handleLoadedData, {
+      once: true,
+    });
 
     return () => {
-      videoElement.removeEventListener("loadeddata", primeFirstFrame);
+      videoElement.removeEventListener("loadeddata", handleLoadedData);
     };
-  }, [hasStarted]);
+  }, []);
 
   return (
     <section className="fullscreen-video">

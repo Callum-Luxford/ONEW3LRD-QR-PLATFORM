@@ -69,8 +69,8 @@ function JoinForm() {
       <div className="contact-form__group">
         <label htmlFor="company">Company</label>
         <input
-          id="companyName"
-          name="companyName"
+          id="company"
+          name="company"
           type="text"
           value={formValues.company}
           onChange={handleChange}
