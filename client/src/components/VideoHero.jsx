@@ -36,6 +36,32 @@ function VideoHero({ experience, onVideoStart }) {
     };
   }, [onVideoStart]);
 
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    function primeFirstFrame() {
+      if (hasStarted) return;
+
+      try {
+        if (videoElement.readyState >= 2) {
+          videoElement.currentTime = 0.05;
+        }
+      } catch (error) {
+        console.error("Could not prepare first frame:", error);
+      }
+    }
+
+    videoElement.preload = "auto";
+    videoElement.load();
+
+    videoElement.addEventListener("loadeddata", primeFirstFrame);
+
+    return () => {
+      videoElement.removeEventListener("loadeddata", primeFirstFrame);
+    };
+  }, [hasStarted]);
+
   return (
     <section className="fullscreen-video">
       <div className="fullscreen-video__stage">
@@ -44,7 +70,7 @@ function VideoHero({ experience, onVideoStart }) {
           className="fullscreen-video__media"
           src={experience.videoUrl}
           playsInline
-          preload="metadata"
+          preload="auto"
           controls={false}
         />
 
