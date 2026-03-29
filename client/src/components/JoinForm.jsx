@@ -3,6 +3,7 @@ import { submitJoinForm } from "../services/joinService";
 
 const initialState = {
   fullName: "",
+  company: "",
   email: "",
   phone: "",
   message: "",
@@ -66,6 +67,18 @@ function JoinForm() {
       </div>
 
       <div className="contact-form__group">
+        <label htmlFor="company">Company</label>
+        <input
+          id="companyName"
+          name="companyName"
+          type="text"
+          value={formValues.company}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div className="contact-form__group">
         <label htmlFor="email">Email</label>
         <input
           id="email"
@@ -78,7 +91,7 @@ function JoinForm() {
       </div>
 
       <div className="contact-form__group">
-        <label htmlFor="phone">Phone (Optional)</label>
+        <label htmlFor="phone">Phone</label>
         <input
           id="phone"
           name="phone"
